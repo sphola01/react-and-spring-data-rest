@@ -35,5 +35,3 @@ steps:
     command: 'buildAndPush'
     Dockerfile: '**/Dockerfile'
     buildContext: '$(build.artifactstagingdirectory)'
-    addPipelineData: false
-    addBaseImageData: false
