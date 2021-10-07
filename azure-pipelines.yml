@@ -29,9 +29,10 @@ steps:
   condition: succeededOrFailed()
 
 - task: Docker@2
-  inputs:
+  inputs:    
     containerRegistry: 'Azure DockerHub'
     repository: 'reactspring'
     command: 'buildAndPush'
     Dockerfile: '**/Dockerfile'
     buildContext: '$(build.artifactstagingdirectory)'
+
