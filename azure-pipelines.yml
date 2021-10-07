@@ -35,4 +35,3 @@ steps:
     command: 'build'
     Dockerfile: '**/Dockerfile'
     buildContext: '$(build.artifactstagingdirectory)'
-    arguments: '--no-cache'
