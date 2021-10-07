@@ -29,10 +29,10 @@ steps:
   condition: succeededOrFailed()
 
 - task: Docker@2
-  inputs:    
+  inputs:
     containerRegistry: 'Azure DockerHub'
     repository: 'reactspring'
-    command: 'buildAndPush'
+    command: 'build'
     Dockerfile: '**/Dockerfile'
     buildContext: '$(build.artifactstagingdirectory)'
-
+    arguments: '--no-cache'
