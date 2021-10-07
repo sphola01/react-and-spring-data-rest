@@ -35,4 +35,4 @@ steps:
     repository: 'devopshub'
     command: 'buildAndPush'
     Dockerfile: '**/Dockerfile'
-    buildContext: 'build.artifactstagingdirectory'
+    buildContext: '$(build.artifactstagingdirectory)'
