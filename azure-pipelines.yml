@@ -14,16 +14,16 @@ steps:
     sonarQubeRunAnalysis: false
 
 
-#- task: CopyFiles@2
-#  displayName: 'Copy Files to: $(build.artifactstagingdirectory)'
-#  inputs:
-#    SourceFolder: '$(system.defaultworkingdirectory)'
-#    Contents: '**/*.jar'
- #   TargetFolder: '$(build.artifactstagingdirectory)'
- # condition: succeededOrFailed()
+- task: CopyFiles@2
+  displayName: 'Copy Files to: $(build.artifactstagingdirectory)'
+  inputs:
+    SourceFolder: '$(system.defaultworkingdirectory)'
+    Contents: '**/*.jar'
+    TargetFolder: '$(build.artifactstagingdirectory)'
+  condition: succeededOrFailed()
 
-#- task: PublishBuildArtifacts@1
-#  displayName: 'Publish Artifact: drop'
-#  inputs:
-#    PathtoPublish: '$(build.artifactstagingdirectory)'
-#  condition: succeededOrFailed()
+- task: PublishBuildArtifacts@1
+  displayName: 'Publish Artifact: react-and-spring-data-rest'
+  inputs:
+    PathtoPublish: '$(build.artifactstagingdirectory)'
+  condition: succeededOrFailed()
