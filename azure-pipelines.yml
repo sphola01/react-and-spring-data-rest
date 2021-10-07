@@ -1,5 +1,4 @@
-pool:
-   name: defualt
+pool: defualt
 
 steps:
 - task: Maven@3
