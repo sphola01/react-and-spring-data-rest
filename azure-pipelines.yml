@@ -35,3 +35,13 @@ steps:
     command: 'build'
     Dockerfile: '**/Dockerfile'
     buildContext: '$(build.artifactstagingdirectory)'
+    addPipelineData: false
+    addBaseImageData: false
+    
+- task: Docker@2
+  inputs:
+    containerRegistry: 'Azure DockerHub'
+    repository: 'reactspring'
+    command: 'push'
+    addPipelineData: false
+    addBaseImageData: false
