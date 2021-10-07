@@ -1,4 +1,4 @@
-pool: defualt
+pool: DevOps
 
 steps:
 - task: Maven@3
