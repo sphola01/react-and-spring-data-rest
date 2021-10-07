@@ -2,11 +2,17 @@ pool: DevOps
 
 steps:
 - task: Maven@3
-  displayName: 'Maven pom.xml'
   inputs:
     mavenPomFile: 'pom.xml'
-    codeCoverageToolOption: Cobertura
-    
+    goals: 'clean verify'
+    publishJUnitResults: true
+    testResultsFiles: '**/surefire-reports/TEST-*.xml'
+    javaHomeOption: 'JDKVersion'
+    mavenVersionOption: 'Default'
+    mavenAuthenticateFeed: false
+    effectivePomSkip: false
+    sonarQubeRunAnalysis: false
+
 
 #- task: CopyFiles@2
 #  displayName: 'Copy Files to: $(build.artifactstagingdirectory)'
