@@ -28,10 +28,8 @@ steps:
     PathtoPublish: '$(build.artifactstagingdirectory)'
   condition: succeededOrFailed()
 
-
-- task: Docker@2
+- task: DownloadPipelineArtifact@2
   inputs:
-    containerRegistry: 'Azure DockerHub'
-    repository: 'devopshub'
-    command: 'buildAndPush'
-    Dockerfile: '**/Dockerfile'
+    buildType: 'current'
+    itemPattern: '**\.jar'
+    targetPath: '$(Pipeline.Workspace)'
