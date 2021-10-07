@@ -1,6 +1,6 @@
 FROM tomcat:8.0-alpine
 
-ADD **/*.jar /usr/local/tomcat/webapps/
+ADD *.jar /usr/local/tomcat/webapps/
 
 EXPOSE 8080
 
