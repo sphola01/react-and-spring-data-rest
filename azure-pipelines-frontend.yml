@@ -31,7 +31,7 @@ steps:
 - task: Docker@2
   inputs:
     containerRegistry: 'Azure DockerHub'
-    repository: 'RegistryTesting1'
+    repository: 'frontend'
     command: 'buildAndPush'
-    Dockerfile: '**/Dockerfile'
+    Dockerfile: '**/Dockerfile-Frontend'
     buildContext: '$(build.artifactstagingdirectory)'
