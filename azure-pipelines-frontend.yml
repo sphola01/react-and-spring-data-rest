@@ -35,3 +35,4 @@ steps:
     command: 'buildAndPush'
     Dockerfile: '**/Dockerfile-Frontend'
     buildContext: '$(build.artifactstagingdirectory)'
+    tags: ''
