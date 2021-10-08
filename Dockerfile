@@ -1,7 +1,5 @@
-FROM openjdk:11
-
-COPY react-and-spring-data-rest-*.jar /myapp
-
-WORKDIR /myapp
-
-CMD ["java -jar target/react-and-spring-data-rest-*.jar", "Main"]
+FROM openjdk:8
+WORKDIR /
+ADD **/react-and-spring-data-rest-*.jar app.jar
+EXPOSE 8080
+CMD ["java", "-jar", "app.jar"]
