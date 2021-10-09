@@ -30,7 +30,7 @@ steps:
 
 - task: Docker@2
   inputs:
-    containerRegistry: 'Azure DockerHub'
+    containerRegistry: 'AzureDev DockerHub'
     repository: 'backend'
     command: 'buildAndPush'
     Dockerfile: '**/Dockerfile-Backend'
